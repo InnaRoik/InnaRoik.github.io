@@ -3,4 +3,4 @@ A professional business website for IK Laser BC.
 
 layout: page
 title: "Services"
-permalink: /Services
+permalink: innaroik.github.io/services
