@@ -265,6 +265,54 @@
       <section id="contact" style="padding:18px 0">
         <h2>Contact & Bookings</h2>
         <div style="display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:12px">
-          <form id="bookingForm" onsubmit="return handleForm(event)">
+          <!-- Formspree Form -->
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" style="display:flex;flex-direction:column;gap:10px">
             <div style="display:flex;gap:10px;flex-wrap:wrap">
-              <div style="flex:1;min-width
+              <div style="flex:1;min-width:180px">
+                <label class="small">Full name</label>
+                <input type="text" name="name" required>
+              </div>
+              <div style="flex:1;min-width:180px">
+                <label class="small">Phone or Email</label>
+                <input type="text" name="contact" required>
+              </div>
+            </div>
+      
+            <div style="margin-top:10px">
+              <label class="small">Service interested in</label>
+              <select name="service">
+                <option>Consultation (free)</option>
+                <option>Face & Neck</option>
+                <option>Underarms & Bikini</option>
+                <option>Legs & Back</option>
+              </select>
+            </div>
+      
+            <div style="margin-top:10px">
+              <label class="small">Preferred date / time</label>
+              <input type="text" name="preferred" placeholder="e.g. Mon 10am or flexible">
+            </div>
+      
+            <div style="margin-top:10px">
+              <label class="small">Notes</label>
+              <textarea name="notes" rows="3" placeholder="Anything we should know..."></textarea>
+            </div>
+      
+            <div style="margin-top:12px">
+              <button type="submit" class="book-btn">Send Booking Request</button>
+            </div>
+            <p class="small" style="margin-top:8px;color:var(--muted)">You will receive a confirmation email shortly.</p>
+          </form>
+      
+          <!-- Contact Info Sidebar -->
+          <aside style="background:linear-gradient(180deg,#fff,#fbfbff);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(16,24,40,0.04)">
+            <h4>Visit Us</h4>
+            <p class="small">123 Main Street<br/>Townsville, BC</p>
+            <h4 style="margin-top:12px">Hours</h4>
+            <p class="small">Mon–Fri 9:00–18:00<br/>Sat 10:00–16:00</p>
+            <h4 style="margin-top:12px">Phone</h4>
+            <p class="small">(555) 555-0123</p>
+          </aside>
+        </div>
+      </section>
+
