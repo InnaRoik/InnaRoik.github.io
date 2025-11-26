@@ -305,7 +305,11 @@ Highly recommend for anyone wanting long-term hair removal.
                 <input type="text" name="name" required>
               </div>
               <div style="flex:1;min-width:180px">
-                <label class="small">Phone or Email</label>
+                <label class="small">Phone</label>
+                <input type="text" name="contact" required>
+              </div>
+              <div style="flex:1;min-width:180px">
+                <label class="small">Email</label>
                 <input type="text" name="contact" required>
               </div>
             </div>
@@ -314,15 +318,19 @@ Highly recommend for anyone wanting long-term hair removal.
               <label class="small">Service interested in</label>
               <select name="service">
                 <option>Consultation (free)</option>
-                <option>Face & Neck</option>
-                <option>Underarms & Bikini</option>
-                <option>Legs & Back</option>
+                <option>Face Zones</option>
+                <option>Upper Body Zones</option>
+                <option>Lower Body Zones</option>
               </select>
             </div>
       
             <div style="margin-top:10px">
-              <label class="small">Preferred date / time</label>
-              <input type="text" name="preferred" placeholder="e.g. Mon 10am or flexible">
+              <label class="small" style="display:block; margin-bottom:4px;">Preferred date / time</label>
+              <input 
+                type="datetime-local" 
+                name="preferred" 
+                style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:14px;"
+              >
             </div>
       
             <div style="margin-top:10px">
