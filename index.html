@@ -30,7 +30,25 @@
     body{margin:0;background:linear-gradient(180deg,#fbfbfd 0%, #f5f7fb 100%);color:#0f172a;line-height:1.45}
 
     .container{max-width:var(--max-width);margin:0 auto;padding:32px}
+    /*Socials*/
+    .facebook-logo-button {
+      /* Remove default link styling */
+      text-decoration: none;
+      display: inline-block;
+      padding: 0;
+      /* Optional: Add some margin around the button */
+      margin: 5px;
+    }
 
+    .facebook-logo-button img {
+        /* Control the size of the logo */
+        width: 40px; /* Adjust size as needed */
+        height: auto;
+        /* Ensure the image itself doesn't have a border if you are using image borders elsewhere */
+        border: none;
+        /* Optional: Add a smooth transition effect on hover */
+        transition: transform 0.2s;
+    }
     /* Header */
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
     .brand{display:flex;align-items:center;gap:12px}
@@ -130,7 +148,9 @@
 
       <nav>
         <a href="https://www.instagram.com/iklaser_bc/">Instagram</a>
-        <a href="https://www.facebook.com/inara.master">Facebook</a>
+        <a href="https://www.facebook.com/inara.master" class="facebook-logo-button">
+          <img src="facebook_logo.png" alt="Facebook Profile">
+        </a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#testimonials">Reviews</a>
