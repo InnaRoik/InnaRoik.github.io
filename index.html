@@ -61,6 +61,38 @@
     }
 
     /* Header */
+    /* NAV HOVER EFFECTS */
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+    
+    /* Text links hover */
+    nav a:hover {
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+    
+    /* Book button hover */
+    nav a.book-btn:hover {
+      background: var(--accent2);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    
+    /* Social icon hover (Instagram & Facebook) */
+    nav a img {
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+    
+    nav a:hover img {
+      transform: scale(1.12);
+      filter: brightness(1.1);
+    }
+    
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ec4899);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px}
