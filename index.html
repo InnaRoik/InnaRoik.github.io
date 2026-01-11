@@ -30,6 +30,7 @@
     body{margin:0;background:linear-gradient(180deg,#fbfbfd 0%, #f5f7fb 100%);color:#0f172a;line-height:1.45}
 
     .container{max-width:var(--max-width);margin:0 auto;padding:32px}
+    
     /*Socials*/
     .facebook-logo-button {
       /* Remove default link styling */
@@ -41,14 +42,24 @@
     }
 
     .facebook-logo-button img {
-        /* Control the size of the logo */
-        width: 40px; /* Adjust size as needed */
-        height: auto;
-        /* Ensure the image itself doesn't have a border if you are using image borders elsewhere */
-        border: none;
-        /* Optional: Add a smooth transition effect on hover */
-        transition: transform 0.2s;
+      /* Control the size of the logo */
+      width: 40px; /* Adjust size as needed */
+      height: auto;
+      /* Ensure the image itself doesn't have a border if you are using image borders elsewhere */
+      border: none;
+      /* Optional: Add a smooth transition effect on hover */
+      transition: transform 0.2s;
     }
+
+    .fa-instagram {
+      background: #e1306c; /* Standard IG color */
+      color: white;
+      padding: 20px;
+      font-size: 30px;
+      border-radius: 50%; /* Makes it a round button */
+      text-decoration: none;
+    }
+
     /* Header */
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
     .brand{display:flex;align-items:center;gap:12px}
@@ -147,7 +158,9 @@
       </div>
 
       <nav>
-        <a href="https://www.instagram.com/iklaser_bc/">Instagram</a>
+        <a href="https://www.instagram.com/iklaser_bc/" target="_blank">
+          <img src="instagram-logo.png" alt="Instagram" style="width:40px; height:40px;">
+        </a>
         <a href="https://www.facebook.com/inara.master" class="facebook-logo-button">
           <img src="facebook_logo.png" alt="Facebook Profile">
         </a>
