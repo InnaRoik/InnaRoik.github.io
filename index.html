@@ -14,6 +14,16 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <!-- JAVASCRIPT -->
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('mobileNav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  </script>
+  
   <style>
     :root{
       --accent:#8b5cf6;       /* violet */
@@ -138,14 +148,51 @@
     footer{padding:28px 0;border-top:1px solid #eef2ff;color:var(--muted)}
     .footer-grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--accent);
+    }
+
+
+
+    
     /* Small screens */
     @media (max-width:900px){
       .hero{grid-template-columns:1fr;}
       .services{grid-template-columns:1fr}
       .testimonials{grid-template-columns:1fr}
       .about{flex-direction:column}
-      nav{display:none}
       .logo{width:48px;height:48px}
+      .menu-toggle {
+        display: block;
+      }
+    
+      nav {
+        display: none;
+        position: absolute;
+        top: 90px;
+        right: 32px;
+        background: white;
+        border-radius: 14px;
+        padding: 18px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        flex-direction: column;
+        gap: 14px;
+        z-index: 1000;
+      }
+    
+      nav.active {
+        display: flex;
+      }
+    
+      nav a {
+        font-size: 16px;
+      }
     }
 
     /* Form */
@@ -182,10 +229,13 @@
   <div class="container">
     <header>
       <div class="brand">
-        <img src="full_logo.png" alt="IK Laser Logo" style="height:150px; border-radius:20px;">
+        <img src="Logo.png" alt="IK Laser Logo" style="height:200px; border-radius:20px;">
       </div>
-
-      <nav>
+    
+      <!-- Hamburger button -->
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    
+      <nav id="mobileNav">
         <a href="https://www.instagram.com/iklaser_bc/" target="_blank">
           <img src="Instagram_Glyph_Gradient.png" alt="Instagram" style="width:30px; height:30px;">
         </a>
