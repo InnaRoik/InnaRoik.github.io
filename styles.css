@@ -117,7 +117,7 @@ nav a:hover {
 nav a.book-btn {
 	background: linear-gradient(120deg, var(--purple-dark), var(--purple-main), var(--purple-light));
 	background-size: 200% auto;
-	color: #111;
+	color: #ffffff;
 	padding: 10px 16px;
 	border-radius: 10px;
 	font-weight: 700;
