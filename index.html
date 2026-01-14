@@ -229,6 +229,9 @@
       transform: scale(1.1);
     }
 
+
+
+    
     /* Footer */
     footer{padding:28px 0;border-top:1px solid #eef2ff;color:var(--muted)}
     .footer-grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
@@ -286,11 +289,31 @@
         font-size: 16px;
       }
     }
-
-    /* Form */
-    .form-row{display:flex;gap:10px}
-    .form-row .field{flex:1}
-    input,textarea,select{width:100%;padding:10px;border-radius:10px;border:1px solid #e6e9f2;font-size:14px}
+    body, input, textarea, select {
+      touch-action: manipulation;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+    /* Form Elements*/
+    input, textarea, select, button {
+      width: 100%;
+      max-width: 100%;
+      padding:10px;
+      border-radius:10px;
+      border:1px solid #e6e9f2;
+      font-size:14px;
+      box-sizing: border-box;
+      touch-action: manipulation; /* prevents accidental dragging */
+    }
+    .form-row{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap; /* allow inputs to wrap instead of overflowing */
+    }
+    .form-row .field{
+      flex:1;
+      min-width: 0; /* prevents overflow inside flex */
+    }
     .small{font-size:13px;color:var(--muted)}
 
     /* Pricing Section */
