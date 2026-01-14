@@ -124,7 +124,13 @@
       transform: scale(1.12);
       filter: brightness(1.1);
     }
-    
+    .logo-img {
+      height: auto;
+      max-height: 60px; /* smaller on mobile */
+      width: auto;
+      max-width: 40vw;   /* prevent it from pushing other elements */
+      border-radius: 20px;
+    }
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ec4899);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px}
@@ -227,7 +233,22 @@
     }
     
     /* Small screens */
-    @media(max-width:800px){
+    @media(max-width:600px){
+      header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px; /* optional spacing */
+      }
+    
+      .brand {
+        flex-shrink: 1; /* allow logo to shrink */
+      }
+    
+      .logo-img {
+        max-height: 50px; /* smaller logo on mobile */
+        max-width: 50%;   /* limit width */
+      }
       .hero{grid-template-columns:1fr}
       .services,.testimonials{grid-template-columns:1fr}
       .menu-toggle{display:block}
@@ -311,7 +332,7 @@
   <div class="container">
     <header>
       <div class="brand">
-        <img src="images/logo_full.png" alt="IK Laser Logo" style="height:100px; border-radius:20px;">
+        <img src="images/logo_full.png" alt="IK Laser Logo" class="logo-img">
       </div>
     
       <!-- Hamburger button -->
