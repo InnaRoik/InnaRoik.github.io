@@ -233,14 +233,10 @@ nav a {
 }
 
 .hero-card {
-	max-width: 100%;
-	/* never overflow parent */
-	width: 100%;
-	/*
-      take full width of its container */
+	max-width: 100%; /* never overflow parent */
+	width: 100%; /*take full width of its container */
 	box-sizing: border-box;
-	background: linear-gradient(180deg, #fff,
-			#fbfbff);
+	background: linear-gradient(180deg, #fff,#fbfbff);
 	border-radius: 16px;
 	padding: 18px;
 	box-shadow: 0 8px 30px rgba(0, 0, 0, .06)
@@ -249,9 +245,7 @@ nav a {
 .hero-card img {
 	width: 100%;
 	height: auto;
-	max-width: 100%;
-	/* prevent
-      forcing width */
+	max-width: 100%; /* prevent forcing width */
 }
 
 .hero-card h3 {
@@ -301,8 +295,7 @@ nav a {
 	object-fit: cover
 }
 
-/* Testimonials
-      */
+/* Testimonials*/
 .testimonials {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -355,7 +348,7 @@ body.dark .hero-card {
 
 /* CTA */
 .cta {
-	background: linear-gradient(90deg, var(--purple-dark), var(--purple-main));
+	background: linear-gradient(180deg, var(--purple-dark), var(--purple-main));
 	color: #111;
 	border-radius: 12px;
 	padding: 28px;
