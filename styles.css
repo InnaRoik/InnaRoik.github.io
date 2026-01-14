@@ -82,17 +82,12 @@ header {
 }
 
 .fa-instagram {
-	background:
-		#e1306c;
-	/* Standard IG color */
+	background:#e1306c; /* Standard IG color */
 	color: white;
 	padding: 20px;
-	font-size:
-		30px;
-	border-radius: 50%;
-	/* Makes it a round button */
-	text-decoration:
-		none;
+	font-size: 30px;
+	border-radius: 50%; /* Makes it a round button */
+	text-decoration: none;
 }
 
 /* Header */
@@ -134,8 +129,7 @@ nav a.book-btn {
 	}
 }
 
-/* Social icon
-      hover (Instagram & Facebook) */
+/* Social icon hover (Instagram & Facebook) */
 nav a img {
 	transition: transform 0.25s ease, filter 0.25s ease;
 }
@@ -148,13 +142,9 @@ nav a:hover img {
 
 .logo-img {
 	height: auto;
-	max-height: 60px;
-	/* smaller
-      on mobile */
+	max-height: 60px; /* smaller on mobile */
 	width: auto;
-	max-width: 40vw;
-	/* prevent it from pushing other
-      elements */
+	max-width: 40vw; /* prevent it from pushing other elements */
 	border-radius: 20px;
 }
 
