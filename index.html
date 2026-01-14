@@ -42,6 +42,7 @@
       color:var(--text);
       line-height:1.45;
       transition:background .4s,color .4s;
+      overflow-x: hidden; /* hides accidental horizontal scroll */
     }
 
     body.dark{
@@ -150,8 +151,20 @@
     .features{display:flex;gap:12px;flex-wrap:wrap}
     .feature{background:var(--card);padding:10px 12px;border-radius:12px;display:inline-flex;align-items:center;gap:10px}
 
-    .hero-card{background:linear-gradient(180deg,#fff, #fbfbff);border-radius:16px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
-
+    .hero-card{
+      max-width: 100%;      /* never overflow parent */
+      width: 100%;          /* take full width of its container */
+      box-sizing: border-box;
+      background:linear-gradient(180deg,#fff, #fbfbff);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 8px 30px rgba(0,0,0,.06)
+    }
+    .hero-card img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;  /* prevent forcing width */
+    }
     .hero-card h3{margin:0 0 8px}
     .price{font-weight:700;font-size:22px}
 
@@ -246,6 +259,15 @@
     
     /* Small screens */
     @media(max-width:600px){
+      #contact > div {
+        display: flex;
+        flex-direction: column; /* stack form and aside */
+        gap: 20px;
+      }
+      .hero-card {
+        width: 100%;
+        max-width: 100%;
+      }
       header {
       flex-direction: row;
       justify-content: space-between;
