@@ -51,7 +51,12 @@
 
     .container{max-width:var(--max-width);margin:auto;padding:32px}
 
-    header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; /* allows items to wrap instead of overflowing */
+    }
     
     /*Socials*/
     .facebook-logo-button {
@@ -131,7 +136,7 @@
       max-width: 40vw;   /* prevent it from pushing other elements */
       border-radius: 20px;
     }
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ec4899);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px}
     nav{display:flex;gap:18px;align-items:center}
