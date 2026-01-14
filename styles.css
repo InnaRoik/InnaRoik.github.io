@@ -67,17 +67,10 @@ header {
 	margin: 5px;
 }
 
-.facebook-logo-button img {
-	/* Control the
-      size of the logo */
-	width: 30px;
-	/* Adjust size as needed */
-	height: auto;
-	/* Ensure the image itself doesn't have a border if you are using image
-      borders elsewhere */
-	border: none;
-	/* Optional: Add a smooth transition
-      effect on hover */
+.facebook-logo-button img {/* Control the size of the logo */
+	width: 30px; /* Adjust size as needed */
+	height: auto; /* Ensure the image itself doesn't have a border if you are using image borders elsewhere */
+	border: none; /* Optional: Add a smooth transition effect on hover */
 	transition: transform 0.2s;
 }
 
