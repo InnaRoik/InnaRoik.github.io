@@ -209,18 +209,24 @@
     }
     .cta h3{margin:0}
 
-    /* Dark mode toggle */
-    .dark-toggle{
-      position:fixed;
-      bottom:18px;
-      right:18px;
-      background:#000;
-      color:var(--gold-main);
-      border:1px solid var(--gold-main);
-      border-radius:50px;
-      padding:10px 14px;
-      cursor:pointer;
-      z-index:9999;
+    /* Dark mode toggle floating */
+    .dark-toggle {
+      position: fixed;      /* float above content */
+      bottom: 18px;
+      right: 18px;
+      background: #000;
+      color: var(--gold-main);
+      border: 1px solid var(--gold-main);
+      border-radius: 50px;
+      padding: 10px 14px;
+      cursor: pointer;
+      z-index: 9999;
+      transition: transform 0.25s;
+    }
+    
+    /* Optional: little pop animation on hover */
+    .dark-toggle:hover {
+      transform: scale(1.1);
     }
 
     /* Footer */
@@ -257,25 +263,7 @@
       .hero{grid-template-columns:1fr}
       .services,.testimonials{grid-template-columns:1fr}
       .menu-toggle{display:block}
-      .dark-toggle {
-        position: fixed;      /* float above content */
-        bottom: 18px;
-        right: 18px;
-        background: #000;
-        color: var(--gold-main);
-        border: 1px solid var(--gold-main);
-        border-radius: 50px;
-        padding: 10px 14px;
-        cursor: pointer;
-        z-index: 9999;
-        transition: transform 0.25s;
-      }
 
-      /* Optional: little pop animation on hover */
-      .dark-toggle:hover {
-        transform: scale(1.1);
-      }
-      
       nav {
         display: none;
         position: absolute;
