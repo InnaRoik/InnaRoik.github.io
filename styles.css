@@ -485,16 +485,12 @@ select {
 .form-row {
 	display: flex;
 	gap: 10px;
-	flex-wrap: wrap;
-	/* allow inputs to wrap instead of overflowing
-      */
+	flex-wrap: wrap;/* allow inputs to wrap instead of overflowing*/
 }
 
 .form-row .field {
 	flex: 1;
-	min-width: 0;
-	/* prevents overflow inside
-      flex */
+	min-width: 0;/* prevents overflow inside flex */
 }
 
 .small {
@@ -502,8 +498,7 @@ select {
 	color: var(--muted)
 }
 
-/* Pricing Section
-      */
+/* Pricing Section*/
 .pricing-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
