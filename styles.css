@@ -22,8 +22,7 @@ body {
 	color: var(--text);
 	line-height: 1.45;
 	transition: background .4s, color .4s;
-	overflow-x: hidden;
-	/* hides accidental horizontal scroll */
+	overflow-x: hidden; /* hides accidental horizontal scroll */
 }
 
 body.dark {
@@ -49,19 +48,14 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
-	/* allows items to wrap instead of overflowing */
+	flex-wrap: wrap; /* allows items to wrap instead of overflowing */
 }
 
 /*Socials*/
-.facebook-logo-button {
-	/* Remove default link styling */
-	text-decoration:
-		none;
+.facebook-logo-button {/* Remove default link styling */
+	text-decoration: none;
 	display: inline-block;
-	padding: 0;
-	/* Optional: Add some margin around
-      the button */
+	padding: 0; /* Optional: Add some margin around the button */
 	margin: 5px;
 }
 
