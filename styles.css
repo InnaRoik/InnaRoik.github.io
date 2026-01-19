@@ -14,9 +14,7 @@
 	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto;
 }
 
-* {
-	box-sizing: border-box
-}
+* {box-sizing: border-box}
 
 body {
 	margin: 0;
@@ -347,9 +345,7 @@ body.dark .hero-card {
 
 /* Dark mode toggle floating */
 .dark-toggle {
-	position: fixed;
-	/* float
-      above content */
+	position: fixed; /* float above content */
 	bottom: 18px;
 	right: 18px;
 	background: #000;
@@ -450,8 +446,7 @@ footer {
 		position: absolute;
 		top: 90px;
 		right: 32px;
-		background:
-			white;
+		background: white;
 		border-radius: 14px;
 		padding: 18px;
 		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
@@ -461,8 +456,7 @@ footer {
 	}
 
 	nav.active {
-		display:
-			flex;
+		display: flex;
 	}
 
 	nav a {
@@ -474,8 +468,7 @@ body,
 input,
 textarea,
 select {
-	touch-action:
-		manipulation;
+	touch-action: manipulation;
 	-webkit-user-drag: none;
 	user-select: none;
 }
@@ -491,8 +484,7 @@ select {
 	border: 1px solid #e6e9f2;
 	font-size: 14px;
 	box-sizing: border-box;
-	touch-action:
-		manipulation;
+	touch-action: manipulation;
 	/* prevents accidental dragging */
 }
 
