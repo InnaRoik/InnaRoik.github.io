@@ -520,6 +520,7 @@ body.dark .feature,
 body.dark .nav,
 body.dark .testimonial {
 	background: #0f1013;
+	color: #0f1013;
 }
 
 body.dark .hero-card,
@@ -527,4 +528,5 @@ body.dark .input,
 body.dark .textarea,
 body.dark .select {
 	background: #0b0c0e;
+	color: #0b0c0e;
 }
