@@ -533,13 +533,17 @@ body.dark select {
   border-color: #333; /* optional: dark borders */
 }
 
+/* Dark mode for datetime-local inputs */
 body.dark input[type="datetime-local"] {
-  background: #0f1013;
-  color: #e5e7eb;
-  border: 1px solid #333;
-  accent-color: #e5e7eb; /* makes calendar icon light */
+    background: #0f1013 !important;
+    color: #e5e7eb !important;
+    border: 1px solid #333 !important;
+    border-radius: 4px;
+    padding: 10px;
+    accent-color: #e5e7eb; /* changes icon color in supported browsers */
 }
 
+/* Make the calendar icon visible */
 body.dark input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-  filter: invert(1); /* ensures icon is visible in Chrome/Edge/Safari */
+    filter: invert(1) !important; /* inverts black ↔ white */
 }
