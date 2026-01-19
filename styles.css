@@ -525,25 +525,29 @@ body.dark .hero-card {
 	color: #e5e7eb;
 }
 
-body.dark textinput,
-body.dark textarea,
-body.dark select {
-  background: #0f1013;
-  color: #e5e7eb;
-  border-color: #333; /* optional: dark borders */
-}
-
-/* Dark mode for datetime-local inputs */
+/* Dark mode for all form elements */
+body.dark .textinput,
+body.dark .input,
+body.dark .textarea,
+body.dark .select,
 body.dark input[type="datetime-local"] {
-    background: #0f1013 !important;
-    color: #e5e7eb !important;
-    border: 1px solid #333 !important;
+    background: #0f1013 !important;  /* dark background */
+    color: #e5e7eb !important;       /* light text */
+    border: 1px solid #333 !important; /* dark border */
     border-radius: 4px;
     padding: 10px;
-    accent-color: #e5e7eb; /* changes icon color in supported browsers */
 }
 
-/* Make the calendar icon visible */
+/* Placeholder text in dark mode */
+body.dark .textinput::placeholder,
+body.dark .textarea::placeholder,
+body.dark .input::placeholder,
+body.dark .select::placeholder,
+body.dark input[type="datetime-local"]::placeholder {
+    color: #aaa !important;
+}
+
+/* Make datetime-local calendar icon visible in Edge/Chrome */
 body.dark input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-    filter: invert(1) !important; /* inverts black ↔ white */
+    filter: invert(1) !important;
 }
