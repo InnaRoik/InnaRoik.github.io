@@ -516,14 +516,16 @@ select {
 body.dark .service,
 body.dark .price-card,
 body.dark .contact,
-body.dark .feature,
 body.dark .nav,
 body.dark .testimonial,
 body.dark .hero-card {
 	background: #0f1013;
 	color: #e5e7eb;
 }
-
+body.dark .feature {
+	background: #24262e;
+	color: #e5e7eb;
+}
 /* Dark mode for all form elements */
 body.dark .textinput,
 body.dark .input,
