@@ -526,6 +526,7 @@ body.dark .hero-card {
 }
 
 body.dark input,
+body.dark textinput,
 body.dark textarea,
 body.dark select {
   background: #0f1013;
