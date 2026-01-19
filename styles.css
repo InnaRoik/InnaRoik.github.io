@@ -301,7 +301,8 @@ body.dark .testimonial {
 	background: #0f1013;
 }
 
-body.dark .hero-card {
+body.dark .hero-card,
+body.dark .small {
 	background: #0b0c0e;
 }
 
