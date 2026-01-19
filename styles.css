@@ -525,11 +525,21 @@ body.dark .hero-card {
 	color: #e5e7eb;
 }
 
-body.dark input,
 body.dark textinput,
 body.dark textarea,
 body.dark select {
   background: #0f1013;
   color: #e5e7eb;
   border-color: #333; /* optional: dark borders */
+}
+
+body.dark input[type="datetime-local"] {
+  background: #0f1013;
+  color: #e5e7eb;
+  border: 1px solid #333;
+  accent-color: #e5e7eb; /* makes calendar icon light */
+}
+
+body.dark input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* ensures icon is visible in Chrome/Edge/Safari */
 }
