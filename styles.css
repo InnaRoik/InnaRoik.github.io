@@ -270,23 +270,6 @@ nav a {
 	object-fit: cover
 }
 
-/*Dark Mode */
-body.dark .service,
-body.dark .price-card,
-body.dark .contact,
-body.dark .feature,
-body.dark .nav,
-body.dark .testimonial {
-	background: #0f1013;
-}
-
-body.dark .hero-card,
-body.dark .input,
-body.dark .textarea,
-body.dark .select {
-	background: #0b0c0e;
-}
-
 /* Testimonials*/
 .testimonials {
 	display: grid;
@@ -527,4 +510,21 @@ select {
 .price-card p {
 	margin: 4px 0;
 	color: var(--muted)
+}
+
+/*Dark Mode */
+body.dark .service,
+body.dark .price-card,
+body.dark .contact,
+body.dark .feature,
+body.dark .nav,
+body.dark .testimonial {
+	background: #0f1013;
+}
+
+body.dark .hero-card,
+body.dark .input,
+body.dark .textarea,
+body.dark .select {
+	background: #0b0c0e;
 }
