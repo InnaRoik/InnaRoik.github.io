@@ -38,23 +38,6 @@ body.dark {
 	--accent-glow: rgba(167, 86, 255, 0.6);
 }
 
-/*Dark Mode */
-body.dark .service,
-body.dark .price-card,
-body.dark .contact,
-body.dark .feature,
-body.dark .nav,
-body.dark .testimonial {
-	background: #0f1013;
-}
-
-body.dark .hero-card,
-body.dark .input,
-body.dark .textarea,
-body.dark .select {
-	background: #0b0c0e;
-}
-
 .container {
 	max-width: var(--max-width);
 	margin: auto;
@@ -285,6 +268,23 @@ nav a {
 	width: 340px;
 	border-radius: 12px;
 	object-fit: cover
+}
+
+/*Dark Mode */
+body.dark .service,
+body.dark .price-card,
+body.dark .contact,
+body.dark .feature,
+body.dark .nav,
+body.dark .testimonial {
+	background: #0f1013;
+}
+
+body.dark .hero-card,
+body.dark .input,
+body.dark .textarea,
+body.dark .select {
+	background: #0b0c0e;
 }
 
 /* Testimonials*/
