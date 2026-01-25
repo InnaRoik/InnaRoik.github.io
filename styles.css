@@ -128,7 +128,7 @@ nav a:hover img {
 .logo-img {
 	height: 50px;
 	max-height: 60px; /* smaller on mobile */
-	width: auto;
+	width: 50px;
 	max-width: 40vw; /* prevent it from pushing other elements */
 	border-radius: 20px;
 }
