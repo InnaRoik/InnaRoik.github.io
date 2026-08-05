@@ -178,12 +178,22 @@ nav a {
 	display: grid;
 	grid-template-columns: 1fr 420px;
 	gap: 36px;
-	align-items: center;
+	align-items: stretch; /* important */
 	padding: 28px 0
 }
 
+.hero-left > .about {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-left {
+  display: flex;
+  height: 100%;
+}
+
 .hero-left h1 {
-	font-size: 36px;
+	font-size: 32px;
 	margin: 0 0 12px
 }
 
@@ -208,8 +218,12 @@ nav a {
 }
 
 .hero-card {
+	aspect-ratio: 4 / 5;
 	max-width: 100%; /* never overflow parent */
+	height: 100%;
+  	display: flex;
 	width: 100%; /*take full width of its container */
+	overflow: hidden;
 	box-sizing: border-box;
 	background: linear-gradient(180deg, #fff,#fbfbff);
 	border-radius: 16px;
@@ -218,9 +232,10 @@ nav a {
 }
 
 .hero-card img {
-	width: 100%;
-	height: auto;
-	max-width: 100%; /* prevent forcing width */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .hero-card h3 {
@@ -304,7 +319,8 @@ nav a {
 }
 
 .reviews h3 {
-	margin: 0:color:var(--accent)
+	margin: 0;
+	color: var(--accent);
 }
 
 /* CTA */
