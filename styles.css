@@ -151,6 +151,56 @@ nav a:hover img {
 	font-weight: 700;
 	font-size: 22px
 }
+/* Circular Interactive Logo */
+.logo-wrapper {
+	position: relative;
+	display: inline-flex;
+	border-radius: 50%;
+	padding: 6px;
+}
+
+.logo-wrapper::before {
+	content: "";
+	position: absolute;
+	inset: -5px;
+	border-radius: 50%;
+	background: linear-gradient(
+		120deg,
+		var(--purple-dark),
+		var(--purple-main),
+		var(--purple-light),
+		var(--purple-main)
+	);
+	background-size: 200% auto;
+	animation: purpleShine 4s linear infinite;
+	filter: blur(10px);
+	opacity: .8;
+	z-index: -1;
+}
+
+.logo-img {
+	width: 20vw;
+	max-width: 150px;
+	height: auto;
+	border-radius: 50%;
+	display: block;
+	transition:
+		transform .35s ease,
+		filter .35s ease;
+	animation: logoFloat 4s ease-in-out infinite;
+	cursor: pointer;
+}
+
+/* Hover */
+.logo-img:hover {
+	transform: scale(1.08) rotate(4deg);
+	filter: brightness(1.15);
+}
+
+.logo-wrapper:hover::before {
+	filter: blur(16px);
+	opacity: 1;
+}
 
 nav {
 	display: flex;
@@ -243,8 +293,58 @@ nav a {
 }
 
 .price {
+	background: linear-gradient(120deg, var(--purple-dark), var(--purple-main), var(--purple-light));
 	font-weight: 700;
 	font-size: 22px
+}
+/* Animated card hover effect */
+.service,
+.price-card {
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Purple glow sweep */
+.service:hover,
+.price-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 0 40px var(--accent-glow);
+}
+
+/* Animated purple border shine */
+.service::before,
+.price-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	padding: 2px;
+	background: linear-gradient(
+		120deg,
+		var(--purple-dark),
+		var(--purple-main),
+		var(--purple-light),
+		var(--purple-main)
+	);
+	background-size: 200% auto;
+	animation: purpleShine 4s linear infinite;
+	
+	/* creates border effect */
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.service:hover::before,
+.price-card:hover::before {
+	opacity: 1;
 }
 
 /* Services */
