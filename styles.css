@@ -664,6 +664,61 @@ nav a {
 	nav a {
 		font-size: 16px;
 	}
+	/* Footer mobile layout */
+	.site-footer {
+		margin-top: 40px;
+		padding: 30px 0 20px;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.footer-contact,
+	.footer-contact p,
+	.footer-contact a {
+		max-width: 100%;
+		overflow-wrap: anywhere;
+		word-break: break-word;
+	}
+
+	.footer-content {
+		width: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+
+	.footer-brand img {
+		width: 70px;
+		margin-bottom: 12px;
+	}
+
+	.footer-brand p {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.footer-links,
+	.footer-contact {
+		align-items: center;
+		text-decoration: none;
+	}
+
+	.footer-links h4,
+	.footer-contact h4 {
+		margin-bottom: 12px;
+	}
+
+	.footer-links a {
+		padding: 6px 0;
+	}
+
+	.footer-contact p {
+		margin: 6px 0;
+	}
+
+	.footer-bottom {
+		margin-top: 25px;
+		padding: 20px 15px 0;
+		font-size: 13px;
+	}
 }
 
 body,
