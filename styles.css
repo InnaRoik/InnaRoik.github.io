@@ -217,14 +217,6 @@ nav a {
 	font-weight: 600
 }
 
-.book-btn {
-	background: var(--accent);
-	color: white;
-	padding: 10px 16px;
-	border-radius: 10px;
-	text-decoration: none;
-	font-weight: 700
-}
 
 /* Hero */
 .hero {
@@ -277,23 +269,30 @@ nav a {
 	width: 100%; /*take full width of its container */
 	overflow: hidden;
 	box-sizing: border-box;
-	background: linear-gradient(180deg, #fff,#fbfbff);
+	background: #fbfbff;
 	border-radius: 16px;
 	padding: 18px;
 	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.699)
 }
 .profile-card {
-	aspect-ratio: 4 / 5;
-	max-width: 100%; /* never overflow parent */
-	height: 100%;
-  	display: flex;
-	width: 100%; /*take full width of its container */
-	overflow: hidden;
-	box-sizing: border-box;
-	background: linear-gradient(180deg, #fff,#fbfbff);
-	border-radius: 16px;
-	padding: 18px;
-	box-shadow: 0 8px 30px rgba(18, 3, 30, 0.404)
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #fbfbff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 30px rgba(18, 3, 30, 0.404);
+}
+
+.profile-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 
@@ -460,7 +459,7 @@ nav a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: 0 0 40px var(--accent-glow);
+	box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .cta h3 {
@@ -468,6 +467,32 @@ nav a {
 	color:#cbd5e1;
 }
 
+.cta-buttons {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+	justify-content: center;
+	background: var(--purple-light);
+	color:var(--purple-dark);
+	padding: 10px;
+	gap: 5px;
+	border-radius: 10px;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 0 40px var(--accent-glow);
+}
+
+
+.cta-buttons:hover {
+	background: var(--purple-dark);
+	color:var(--gold-light);
+	padding: 10px;
+	gap: 5px;
+	border-radius: 10px;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 0 40px var(--accent-glow);
+}
 
 .contact-grid {
 	display:grid;
@@ -541,6 +566,8 @@ nav a {
 
 .footer-links,
 .footer-contact {
+	color: var(--muted);
+	text-decoration:none;
 	display:flex;
 	flex-direction:column;
 	gap:0px;
@@ -551,11 +578,12 @@ nav a {
 .footer-contact h4 {
 	margin:0 0 10px;
 	color:var(--purple-light);
+	text-decoration:none;
 }
 
 
 .footer-links a {
-	color:#cbd5e1;
+	color: var(--muted);
 	text-decoration:none;
 	transition:.25s;
 }
@@ -564,6 +592,7 @@ nav a {
 .footer-links a:hover {
 	color:white;
 	transform:translateX(4px);
+	text-decoration:none;
 }
 
 
@@ -664,6 +693,17 @@ nav a {
 	nav a {
 		font-size: 16px;
 	}
+
+	.cta-buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.cta-buttons .btn {
+		width: 100%;
+		max-width: 280px;
+	}
+
 	/* Footer mobile layout */
 	.site-footer {
 		margin-top: 40px;
@@ -787,7 +827,7 @@ body.dark .price-card,
 body.dark .contact,
 body.dark .nav,
 body.dark .testimonial,
-body.dark .hero-card
+body.dark .hero-card,
 body.dark .profile-card {
 	background: #0f1013;
 	color: #e5e7eb;
