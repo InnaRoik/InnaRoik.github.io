@@ -7,36 +7,173 @@
     <style>:
       root{--p:#76278c;--l:#f5eaf9}
       *{box-sizing:border-box}
-      body{font:15px/1.5 system-ui,Arial;background:#faf7fb;color:#302638;margin:0}
-      .wrap{max-width:850px;margin:30px auto;background:white;padding:28px;border-radius:18px;box-shadow:0 4px 30px #55226319}
-      header{text-align:center;border-bottom:3px solid #b884c5;padding-bottom:16px}
-      h1{color:var(--p);font-family:Georgia;font-size:32px;margin:0}
-      h2{color:var(--p);font-size:19px;margin:24px 0 12px;background:var(--l);padding:8px 12px;border-radius:9px}
-      h3{font-size:15px;margin:12px 0 4px}
-      .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
-      label.field{display:block;font-weight:600}
-      input[type=text],input[type=email],input[type=tel],input[type=date],textarea{width:100%;padding:10px;border:1px solid #c8b7ce;border-radius:7px;font:inherit;background:white}
-      .question{padding:10px 0;border-bottom:1px solid #eee}
-      .question>div{display:flex;flex-wrap:wrap;gap:10px 17px;margin-top:6px}
-      label.choice{display:inline-flex;align-items:center;gap:5px;font-weight:400}
-      input[type=checkbox],input[type=radio]{accent-color:var(--p);width:17px;height:17px}
-      .types{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-      .types label{display:block;margin:5px 0}
-      .consent{background:var(--l);border-radius:12px;padding:14px;margin-top:18px}
-      .sig{border:2px dashed #b99ac4;border-radius:8px;width:100%;height:130px;touch-action:none;background:white}
-      .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
-      button{background:var(--p);color:white;border:0;border-radius:8px;padding:12px 18px;font-weight:700;cursor:pointer}
-      button.secondary{background:#eee;color:#43264c}
-      .note{font-size:13px;color:#685a70}@media(max-width:650px){.wrap{margin:0;padding:17px;border-radius:0}
-      .grid,.types{grid-template-columns:1fr}}@media print{body{background:white;font-size:11px}
-      .wrap{margin:0;max-width:none;padding:5px;box-shadow:none}h2{margin:10px 0 5px}
-      .question{padding:3px 0}
-      .actions,.note{display:none}
-      .sig{height:65px}
-      .consent{padding:8px}
-      input,textarea{padding:3px!important}
-      header{padding-bottom:5px}
-      h1{font-size:24px}}
+      body{
+        font:15px/1.5 system-ui,Arial;
+        background:#faf7fb;
+        color:#302638;
+        margin:0
+      }
+      .wrap{
+        max-width:850px;
+        margin:30px auto;
+        background:white;
+        padding:28px;
+        border-radius:18px;
+        box-shadow:0 4px 30px #55226319
+      }
+      header{
+        text-align:center;
+        border-bottom:3px solid #b884c5;
+        padding-bottom:16px
+      }
+      h1{
+        color:var(--p);
+        font-family:Georgia;
+        font-size:32px;
+        margin:0
+      }
+      h2{
+        color:var(--p);
+        font-size:19px;
+        margin:24px 0 12px;
+        background:var(--l);
+        padding:8px 12px;
+        border-radius:9px
+      }
+      h3{
+        font-size:15px;
+        margin:12px 0 4px
+      }
+      .grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px 18px
+      }
+      label.field{
+        display:block;
+        font-weight:600
+      }
+      input[type=text],input[type=email],input[type=tel],input[type=date],textarea{
+        width:100%;
+        padding:10px;
+        border:1px solid #c8b7ce;
+        border-radius:7px;
+        font:inherit;
+        background:white
+      }
+      .question{
+        padding:10px 0;
+        border-bottom:1px solid #eee
+      }
+      .question>div{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px 17px;
+        margin-top:6px
+      }
+      label.choice{
+        display:inline-flex;
+        align-items:center;
+        gap:5px;
+        font-weight:400
+      }
+      input[type=checkbox],input[type=radio]{
+        accent-color:var(--p);
+        width:17px;
+        height:17px
+      }
+      .types{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:20px
+      }
+      .types label{
+        display:block;
+        margin:5px 0
+      }
+      .consent{
+        background:var(--l);
+        border-radius:12px;
+        padding:14px;
+        margin-top:18px
+      }
+      .sig{
+        border:2px dashed #b99ac4;
+        border-radius:8px;
+        width:100%;
+        height:130px;
+        touch-action:none;
+        background:white
+      }
+      .actions{
+        display:flex;
+        gap:12px;
+        flex-wrap:wrap;
+        margin-top:20px
+      }
+      button{
+        background:var(--p);
+        color:white;
+        border:0;
+        border-radius:8px;
+        padding:12px 18px;
+        font-weight:700;
+        cursor:pointer
+      }
+      button.secondary{
+        background:#eee;
+        color:#43264c
+      }
+      .note{
+        font-size:13px;
+        color:#685a70
+      }
+      @media(max-width:650px){
+        .wrap{
+          margin:0;
+          padding:17px;
+          border-radius:0
+        }
+        .grid,.types{
+          grid-template-columns:1fr
+        }
+      }
+      @media print{
+        body{
+          background:white;
+          font-size:11px
+        }
+        .wrap{
+          margin:0;
+          max-width:none;
+          padding:5px;
+          box-shadow:none
+        }
+        h2{
+          margin:10px 0 5px
+        }
+        .question{
+          padding:3px 0
+        }
+        .actions,.note{
+          display:none
+        }
+        .sig{
+          height:65px
+        }
+        .consent{
+          padding:8px
+        }
+        input,textarea{
+          padding:3px!important
+        }
+        header{
+          padding-bottom:5px
+        }
+        h1{
+          font-size:24px
+        }
+      }
     </style>
   </head>
   <body>
@@ -129,7 +266,9 @@
       l.className='choice';
       let inp=document.createElement('input');
       inp.type=(i===2?'checkbox':'radio');
-      inp.name='q'+(i+1);inp.value=o;l.append(inp,document.createTextNode(o));
+      inp.name='q'+(i+1);
+      inp.value=o;
+      l.append(inp,document.createTextNode(o));
       row.append(l)});
       d.append(row);
       if(i===5){
@@ -183,7 +322,10 @@
       c.getContext('2d').clearRect(0,0,c.width,c.height)
     });
     document.getElementById('print').onclick=()=>{
-      if(document.getElementById('form').reportValidity())window.open('mailto:ik.laser.bc@gmail.com')
+      if(document.getElementById('form').reportValidity())
+        window.print()
+      //RESOURCES: https://stackoverflow.com/questions/51644886/can-you-pre-fill-parts-of-an-email-using-mailto
+        window.open('mailto:ik.laser.bc@gmail.com?subject=Client%20Consultation%20Form%20Submission&body=Please%20attach%20your%20PDF%20copy%20of%20your%20consultation%20form%20to%20this%20email.')
     };
     document.getElementById('form').addEventListener('reset',()=>document.querySelectorAll('canvas').forEach(c=>c.getContext('2d').clearRect(0,0,c.width,c.height)));
     </script>
