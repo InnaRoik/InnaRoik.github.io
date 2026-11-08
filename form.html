@@ -234,8 +234,9 @@
           <label class="field">Practitioner Date<input type="date" name="practitioner_date"></label>
         </div>
         <div class="actions">
-          <button type="button" id="print">Send Form</button>
+          <button type="button" id="print">Download PDF</button>
           <button type="reset" class="secondary">Clear form</button>
+          <button type="button" id="send">Send Form</button>
         </div>
         <p class="note">Privacy: This standalone form runs in your browser and does not send or store
           submissions on a server. To collect completed forms online, connect it to a secure
@@ -326,9 +327,14 @@
       let c=document.getElementById(b.dataset.clear);
       c.getContext('2d').clearRect(0,0,c.width,c.height)
     });
+      
     document.getElementById('print').onclick=()=>{
       if(document.getElementById('form').reportValidity())
         window.print()
+    };
+      
+    document.getElementById('send').onclick=()=>{
+      if(document.getElementById('form').reportValidity())
       //RESOURCES: https://stackoverflow.com/questions/51644886/can-you-pre-fill-parts-of-an-email-using-mailto
         window.open('mailto:ik.laser.bc@gmail.com?subject=Client%20Consultation%20Form%20Submission&body=Please%20attach%20your%20PDF%20copy%20of%20your%20consultation%20form%20to%20this%20email.')
     };
