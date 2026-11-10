@@ -1,5 +1,8 @@
-      :root {
-	/* === PRIMARY PURPLE SYSTEM === */
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   ROOT STYLES  ----------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+:root {
+	/* === PRIMARY PURPLE THEME === */
 	--purple-main: #6D28D9;
 	--purple-dark: #4C1D95;
 	--purple-light: #E9D5FF;
@@ -9,25 +12,30 @@
 	--card: #ffffff;
 	--text: #171717;
 	--bg: #f5f7fb;
-	--gold: #D4AF37;          /* champagne gold */
+	--gold: #D4AF37;         
   	--gold-light: #F7E7B2;
 	--radius: 14px;
 	--max-width: 1100px;
+	--primary-font-color:#cbd5e1;
 	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto;
 }
 
-
-* {box-sizing: border-box}
-
-body {
-	margin: 0;
-	background: linear-gradient(180deg, #fbfbfd, #f5f7fb);
-	color: var(--text);
-	line-height: 1.45;
-	transition: background .4s, color .4s;
-	overflow-x: hidden; /* hides accidental horizontal scroll */
+/*-----------------------------------*/
+/*--------- DARK MODE TOGGLE --------*/
+/*-----------------------------------*/
+.dark-toggle {
+	position: fixed; /* float above content */
+	bottom: 18px;
+	right: 18px;
+	background: #000;
+	color: var(--purple-main);
+	border: 1px solid var(--purple-main);
+	border-radius: 50px;
+	padding: 10px 14px;
+	cursor: pointer;
+	z-index: 9999;
+	transition: transform 0.25s;
 }
-
 body.dark {
 	background: #050607;
 	color: #e5e7eb;
@@ -39,6 +47,25 @@ body.dark {
 	--bg: #020617;
 	--muted: #9ca3af;
 	--accent-glow: rgba(167, 86, 255, 0.6);
+}
+
+.dark-toggle:hover {
+	transform:
+		scale(1.1);
+}
+
+/*-----------------------------------*/
+/*------------- GENERAL -------------*/
+/*-----------------------------------*/
+* {box-sizing: border-box}
+
+body {
+	margin: 0;
+	background: linear-gradient(180deg, #fbfbfd, #f5f7fb);
+	color: var(--text);
+	line-height: 1.45;
+	transition: background .4s, color .4s;
+	overflow-x: hidden; /* hides accidental horizontal scroll */
 }
 
 .container {
@@ -53,88 +80,20 @@ header {
 	align-items: center;
 	flex-wrap: wrap; /* allows items to wrap instead of overflowing */
 }
-
-/*Socials*/
-.facebook-logo-button {/* Remove default link styling */
-	text-decoration: none;
-	display: inline-block;
-	padding: 0; /* Optional: Add some margin around the button */
-	margin: 5px;
+h4{
+	margin:0;
 }
 
-.facebook-logo-button img {/* Control the size of the logo */
-	width: 30px; /* Adjust size as needed */
-	height: auto; /* Ensure the image itself doesn't have a border if you are using image borders elsewhere */
-	border: none; /* Optional: Add a smooth transition effect on hover */
-	transition: transform 0.2s;
-}
-
-.fa-instagram {
-	background:#e1306c; /* Standard IG color */
-	color: white;
-	padding: 20px;
-	font-size: 30px;
-	border-radius: 50%; /* Makes it a round button */
-	text-decoration: none;
-}
-
-/* Header */
-/* NAV HOVER EFFECTS */
-nav a {
-	color: var(--muted);
-	text-decoration: none;
-	font-weight: 600;
-	position: relative;
-	transition:
-		color 0.25s ease, transform 0.25s ease;
-}
-
-/* Text links hover */
-nav a:hover {
-	color: var(--accent);
-	transform: translateY(-1px);
-	animation: purpleShine 4s linear infinite;
-}
-
-/* Book button hover */
-nav a.book-btn {
-	background: linear-gradient(120deg, var(--purple-dark), var(--purple-main), var(--purple-light));
-	background-size: 200% auto;
-	color: #ffffff;
-	padding: 10px 16px;
-	border-radius: 10px;
-	font-weight: 700;
-	box-shadow: 0 0 40px var(--accent-glow);
-}
-
-@keyframes purpleShine {
-	0% {
-		background-position: 0%
-	}
-
-	100% {
-		background-position: 200%
-	}
-}
-
-/* Social icon hover (Instagram & Facebook) */
-nav a img {
-	transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-nav a:hover img {
-	transform: scale(1.12);
-	filter:
-		brightness(1.1);
-}
+/*----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------  BRANDING - TOP LEFT  ------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
 
 .logo-img {
-  width: 20vw;          /* responsive width */
-  max-width: 150px;     /* prevent it from being huge */
-  height: auto;         /* maintain aspect ratio */
+  width: 20vw;          
+  max-width: 150px;     
+  height: auto;         
   border-radius: 20px;
 }
-
 
 .brand {
 	display: flex;
@@ -154,7 +113,8 @@ nav a:hover img {
 	font-weight: 700;
 	font-size: 22px
 }
-/* Circular Interactive Logo */
+
+
 .logo-wrapper {
 	position: relative;
 	display: inline-flex;
@@ -194,7 +154,7 @@ nav a:hover img {
 	cursor: pointer;
 }
 
-/* Hover */
+
 .logo-img:hover {
 	transform: scale(1.08) rotate(4deg);
 	filter: brightness(1.15);
@@ -205,6 +165,48 @@ nav a:hover img {
 	opacity: 1;
 }
 
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   NAVIGATION  -----------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------*/
+/*------------ SOCIALS --------------*/
+/*-----------------------------------*/
+nav a img {
+	transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+nav a:hover img {
+	transform: scale(1.12);
+	filter:
+		brightness(1.1);
+}
+.facebook-logo-button {/* Remove default link styling */
+	text-decoration: none;
+	display: inline-block;
+	padding: 0; /* Optional: Add some margin around the button */
+	margin: 5px;
+}
+
+.facebook-logo-button img {/* Control the size of the logo */
+	width: 30px; /* Adjust size as needed */
+	height: auto; /* Ensure the image itself doesn't have a border if you are using image borders elsewhere */
+	border: none; /* Optional: Add a smooth transition effect on hover */
+	transition: transform 0.2s;
+}
+
+.fa-instagram {
+	background:#e1306c; /* Standard IG color */
+	color: white;
+	padding: 20px;
+	font-size: 30px;
+	border-radius: 50%; /* Makes it a round button */
+	text-decoration: none;
+}
+
+/*-----------------------------------*/
+/*------------ MAIN -----------------*/
+/*-----------------------------------*/
 nav {
 	display: flex;
 	gap: 18px;
@@ -214,11 +216,73 @@ nav {
 nav a {
 	color: var(--muted);
 	text-decoration: none;
-	font-weight: 600
+	font-weight: 600;
+	position: relative;
+	transition:
+		color 0.25s ease, transform 0.25s ease;
 }
 
 
-/* Hero */
+nav a:hover {
+	color: var(--accent);
+	transform: translateY(-1px);
+	animation: purpleShine 4s linear infinite;
+}
+
+/*-----------------------------------*/
+/*------------ HAMBURGER ------------*/
+/*-----------------------------------*/
+.menu-toggle {
+	display: none;
+	font-size: 28px;
+	background:
+		none;
+	border: none;
+	cursor: pointer;
+	color: var(--accent);
+}
+
+/*-----------------------------------*/
+/*------------ CTA ------------------*/
+/*-----------------------------------*/
+nav a.book-btn {
+	background: linear-gradient(120deg, var(--purple-dark), var(--purple-main), var(--purple-light));
+	background-size: 200% auto;
+	color: #ffffff;
+	padding: 10px 16px;
+	border-radius: 10px;
+	font-weight: 700;
+	box-shadow: 0 0 40px var(--accent-glow);
+}
+
+@keyframes purpleShine {
+	0% {
+		background-position: 0%
+	}
+
+	100% {
+		background-position: 200%
+	}
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------   HERO -------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+.about {
+	display: flex;
+	gap: 20px;
+	border-radius: 12px;
+	align-items: center;
+	padding: 32px;
+	box-shadow: 0 8px 30px rgba(18, 3, 30, 0.404)
+}
+
+.about img {
+	width: 340px;
+	border-radius: 12px;
+	object-fit: cover
+}
+
 .hero {
 	display: grid;
 	grid-template-columns: 1fr 420px;
@@ -274,6 +338,7 @@ nav a {
 	padding: 18px;
 	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.699)
 }
+
 .profile-card {
   aspect-ratio: auto;
   width: 100%;
@@ -309,13 +374,47 @@ nav a {
 	margin: 0 0 8px
 }
 
+/*----------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------   SERVICES ---------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+.services {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 18px;
+	margin: 36px 0;
+}
+
+.service {
+	background: #fff;
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(18, 3, 30, 0.404)
+}
+
+.price-card {
+	background: #fff;
+	padding: 20px;
+	border-radius: 12px;
+	text-decoration: none;
+	box-shadow: 0 8px 30px rgba(18, 3, 30, 0.404)
+}
+
+.service h4 {
+	margin: 0 0 8px
+}
+
+.service p {
+	margin: 0;
+	color: var(--muted)
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------   PRICING  ---------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
 .price {
 	font-weight: 700;
 	font-size: 22px
 }
-
-
-/* Animated card hover effect */
 .service,
 .price-card {
 	position: relative;
@@ -323,14 +422,12 @@ nav a {
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Purple glow sweep */
 .service:hover,
 .price-card:hover {
 	transform: translateY(-6px);
 	box-shadow: 0 0 40px var(--accent-glow);
 }
 
-/* Animated purple border shine */
 .service::before,
 .price-card::before {
 	content: "";
@@ -365,56 +462,9 @@ nav a {
 	opacity: 1;
 }
 
-
-/* Services */
-.services {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 18px;
-	margin: 36px 0;
-}
-
-.service {
-	background: #fff;
-	padding: 20px;
-	border-radius: 12px;
-	box-shadow: 0 8px 30px rgba(18, 3, 30, 0.404)
-}
-
-.price-card {
-	background: #fff;
-	padding: 20px;
-	border-radius: 12px;
-	text-decoration: none;
-	box-shadow: 0 8px 30px rgba(18, 3, 30, 0.404)
-}
-
-.service h4 {
-	margin: 0 0 8px
-}
-
-.service p {
-	margin: 0;
-	color: var(--muted)
-}
-
-/* About */
-.about {
-	display: flex;
-	gap: 20px;
-	border-radius: 12px;
-	align-items: center;
-	padding: 32px;
-	box-shadow: 0 8px 30px rgba(18, 3, 30, 0.404)
-}
-
-.about img {
-	width: 340px;
-	border-radius: 12px;
-	object-fit: cover
-}
-
-/* Testimonials*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   TESTIMONIALS  ---------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
 .testimonials {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -435,7 +485,7 @@ nav a {
 	font-size: 22px
 }
 
-/* Reviews*/
+
 .reviews {
 	background: #ffffff;
 	color: white;
@@ -452,7 +502,9 @@ nav a {
 	color: var(--accent);
 }
 
-/* CTA */
+/*----------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------   CALL TO ACTION (CTA)  ---------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
 .cta {
 	background: linear-gradient(180deg, var(--purple-dark), var(--purple-main));
 	color: #111;
@@ -484,7 +536,6 @@ nav a {
 	box-shadow: 0 0 40px var(--accent-glow);
 }
 
-
 .cta-buttons:hover {
 	background: var(--purple-dark);
 	color:var(--gold-light);
@@ -507,29 +558,13 @@ nav a {
 	box-shadow: 0 8px 30px rgba(24, 3, 42, 0.892)
 }
 
-/* Dark mode toggle floating */
-.dark-toggle {
-	position: fixed; /* float above content */
-	bottom: 18px;
-	right: 18px;
-	background: #000;
-	color: var(--purple-main);
-	border: 1px solid var(--purple-main);
-	border-radius: 50px;
-	padding: 10px 14px;
-	cursor: pointer;
-	z-index: 9999;
-	transition: transform 0.25s;
-}
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   FOOTER  ---------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
 
-/*
-      Optional: little pop animation on hover */
-.dark-toggle:hover {
-	transform:
-		scale(1.1);
-}
-
-/* Footer */
+/*-----------------------------------*/
+/*------------ GENERAL --------------*/
+/*-----------------------------------*/
 .site-footer {
 	margin-top:60px;
 	padding:40px 0 20px;
@@ -538,97 +573,281 @@ nav a {
 	border-radius:20px 20px 0 0;
 }
 
-
 .footer-content {
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:20px;
-    padding:0 30px;
-    align-items:start;
+    display:flex;
 }
 
+.footer-links,
+.footer-hours,
+.footer-contact,
+.footer-brand {
+	text-decoration:none;
+	display:flex;
+	flex-direction:column;
+	gap:8px;
+	width:25%;
+	padding:0vw 2vw 0vw 2vw;
+}
 
+/*-----------------------------------*/
+/*------------ BRANDING -------------*/
+/*-----------------------------------*/
 .footer-brand img {
 	width:80px;
 	border-radius:50%;
 	margin-bottom:15px;
 }
 
-
 .footer-brand h3 {
 	margin:0 0 10px;
 	color:white;
 }
 
-
 .footer-brand p {
+	width: 100%;
 	color:#cbd5e1;
-	max-width:320px;
 }
 
-/* Footer Links + Contact */
-.footer-links,
-.footer-contact {
-	color: var(--muted);
-	text-decoration:none;
-	display:flex;
-	flex-direction:column;
-	gap:8px;
-}
-
-
-.footer-links h4,
-.footer-contact h4 {
-	margin:0 0 10px;
-	color:var(--purple-light);
-}
-
-/* Link Styling */
-.footer-links a,
-.footer-contact a {
+/*-----------------------------------*/
+/*------------ QUICK LINKS ----------*/
+/*-----------------------------------*/
+.footer-links a{
 	color: var(--muted);
 	text-decoration:none;
 	transition:.25s ease;
+	&:hover{
+		color:white;
+		transform:translateX(4px);
+		text-decoration:none;
+	}
+}
+.footer-links{
+	text-align: center;
 }
 
-
-.footer-links a:hover,
-.footer-contact a:hover {
-	color:white;
-	transform:translateX(4px);
-	text-decoration:none;
+/*-----------------------------------*/
+/*-------------- HOURS --------------*/
+/*-----------------------------------*/
+.footer-hours{
+	color:var(--primary-font-color);
+	h4{
+		margin:0;
+	}
 }
 
-
-/* Contact Text */
-.footer-contact p {
-    color:#cbd5e1;
-    margin:0;
+/*-----------------------------------*/
+/*-------------- CONTACT ------------*/
+/*-----------------------------------*/
+.footer-contact{
+	a{
+		color:var(--muted);
+		text-decoration: none;
+		&:hover{
+			color:var(--primary-font-color);
+		}
+	}
+	p{
+		padding:0;
+		margin:0;
+	}
 }
 
-
+/*-----------------------------------*/
+/*------------ COPYRIGHT ------------*/
+/*-----------------------------------*/
 .footer-bottom {
-	margin-top:30px;
+	margin-top:1vw;
 	padding-top:20px;
 	border-top:1px solid rgba(255,255,255,.15);
 	text-align:center;
 	color:#94a3b8;
 	font-size:14px;
+	a{
+		color:var(--muted);
+		text-decoration: none;
+		&:hover{
+			color:var(--primary-font-color);
+		}
+	}
+
 }
 
-/* Hamburger button */
-.menu-toggle {
-	display: none;
-	font-size: 28px;
-	background:
-		none;
-	border: none;
-	cursor: pointer;
-	color: var(--accent);
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   PRIVACY POLICY  -------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+.privacy-content{
+  height:100%;
+  text-align: left;
 }
 
-/* Small screens
-      */
+.uc-privacy-policy{
+  .privacy-text{
+  text-align: left;
+}
+  height: fit-content;
+  .uc-privacy-container,
+  .privacy-table-container{
+    margin:2vw;
+    background: #000000be;
+    width:95%
+  }
+  .uc-privacy-container{
+     border-radius: 5vw;
+  }
+  h1{
+    font-size: 2vw;
+  }
+  h2{
+    font-size: 1.7vw;
+    text-align: left;
+  }
+  h3{
+    font-size: 2vw;
+  }
+  h4{
+    font-size: 2vw;
+  }
+  p{
+    font-size: 1vw;
+    text-align: left;
+  }
+  a{
+    color:#0459f7;
+    margin: 0;
+    padding:0;
+    width:fit-content;
+    &:hover{
+      color:#03bff8;
+    }
+
+  }
+.privacy-table th:nth-child(3),
+ .privacy-table td:nth-child(3),
+  .privacy-table th:nth-child(4){
+  width: auto;
+}
+.privacy-table th{
+  width:fit-content;
+  background: var(--primary-color--);
+}
+  h1,p,ul,h2,h3,h4,li,th,td,tr,.privacy-table a{
+    margin:0 2vw;
+    font-family: var(--primary-font--);
+    color: var(--primary-color--);
+    text-decoration: none;
+  }
+ td,tr,th{
+    width: fit-content;
+  }
+  .privacy-table th, .privacy-table td{
+    padding-left:0.2vw;
+    width: fit-content;
+  }
+  strong,span{
+    color: var(--primary-color--);
+    font-size: 0.8vw;
+    padding:0;
+  }
+  .privacy-table{
+    color:var(--primary-color--);
+    background-color: #000000;
+  }
+  li,.privacy-list-item{
+    font-size: 0.8vw;
+    padding:0;
+    margin:0;
+  }
+  font-family: var(--primary-font--);
+  font: var(--primary-font-color--);
+  position: relative;
+  z-index: 1;
+  .privacy-footer,.privacy-meta-group,.privacy-meta-link{
+    color:var(--primary-color--);
+  }
+}
+.policy-section{
+  background-color: #000000be;
+  border-radius: 5vw;
+  margin:2vw;
+  padding: 2vw;
+  h1{
+    margin:0;
+    padding:0;
+    text-align: left;
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   SCREEN SIZES  ---------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------*/
+/*----- 7680 X 4320 (8K Displays) ---*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 7680px) {
+  body{
+    max-width: 7680px;
+  }
+}
+
+/*-----------------------------------*/
+/*--- 3840 X 2160 (4K Displays) -----*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 3840px) {
+  body{
+    max-width: 3840px;
+  }
+
+}
+
+/*-----------------------------------*/
+/*-- 2560 X 1440 (2K/QHD Displays) --*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 2560px) {
+  body,html{
+    max-width: 2560px;
+  }
+
+}
+
+/*-----------------------------------*/
+/*- 1920 X 1080 (Full HD Displays) --*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 1920px) {
+  body,html{
+    max-width: 1920px;
+  }
+}
+
+
+/*-----------------------------------*/
+/*----- 1280 X 720 (HD Displays) ----*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 1280px) {
+  body,html{
+    max-width: 1280px;
+  }
+}
+
+
+/*-----------------------------------*/
+/*----- 640 X 480 (SD Displays) -----*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 640px) {
+  body,html{
+    max-width: 640px;
+  }
+}
+
+/*------------------------------------*/
+/*----------- Phone Displays ---------*/
+/*------------------------------------*/
+
 @media(max-width:600px) {
 	#contact>div {
 		display: flex;
@@ -710,54 +929,26 @@ nav a {
 		max-width: 280px;
 	}
 
-	/* Footer mobile layout */
-	.site-footer {
-		margin-top: 40px;
-		padding: 30px 0 20px;
-		border-radius: 20px 20px 0 0;
-	}
-
-	.footer-contact,
-	.footer-contact p,
-	.footer-contact a {
-		max-width: 100%;
-		overflow-wrap: anywhere;
-		word-break: break-word;
-	}
-
 	.footer-content {
-		width: 100%;
-		box-sizing: border-box;
-		overflow: hidden;
-	}
-
-	.footer-brand img {
-		width: 70px;
-		margin-bottom: 12px;
-	}
-
-	.footer-brand p {
-		max-width: 100%;
-		margin: 0 auto;
+    display:block;
 	}
 
 	.footer-links,
-	.footer-contact {
-		align-items: left;
-		text-decoration: none;
+	.footer-hours,
+	.footer-contact,
+	.footer-brand {
+		justify-content: center;
+		margin:2vw auto;
+		text-decoration:none;
+		text-align: center;
+		display:flex;
+		flex-direction:column;
+		gap:0px;
+		width:100%;
+		padding:0vw 2vw 0vw 2vw;
 	}
-
-	.footer-links h4,
-	.footer-contact h4 {
-		margin-bottom: 12px;
-	}
-
-	.footer-links a {
-		padding: 6px 0;
-	}
-
-	.footer-contact p {
-		margin: 6px 0;
+	.footer-brand img {
+		margin:1vw auto;
 	}
 
 	.footer-bottom {
