@@ -685,20 +685,31 @@ nav a.book-btn {
   height:100%;
   text-align: left;
 }
-
-.uc-privacy-policy{
-  .privacy-text{
-  text-align: left;
+tbody{
+	background: #ffffff;
 }
+.uc-privacy-container.privacy-wrapper{
+		padding:1vw;
+		border: solid 2px var(--purple-main);
+	
+}
+.uc-privacy-policy{
+	.privacy-table-container{
+		filter:drop-shadow(0 0 0.9rem var(--purple-main));
+	}
+  .privacy-text{
+	text-align: left;
+	}
+
   height: fit-content;
   .uc-privacy-container,
   .privacy-table-container{
     margin:2vw;
-    background: #ffffffbe;
     width:95%
   }
   .uc-privacy-container{
      border-radius: 5vw;
+	 
   }
   h1{
     font-size: 2vw;
@@ -735,6 +746,7 @@ nav a.book-btn {
 .privacy-table th{
   width:fit-content;
   background: var(--purple-main);
+  color:var(--primary-font-color);
 }
   h1,p,ul,h2,h3,h4,li,th,td,tr,.privacy-table a{
     margin:0 2vw;
