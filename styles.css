@@ -80,6 +80,11 @@ header {
 	align-items: center;
 	flex-wrap: wrap; /* allows items to wrap instead of overflowing */
 }
+h5{
+	font-size: 2vw;
+	margin:4vw 4vw 1vw 4vw;
+	animation: glow 2s;
+}
 h4{
 	margin:0;
 }
@@ -689,7 +694,7 @@ nav a.book-btn {
   .uc-privacy-container,
   .privacy-table-container{
     margin:2vw;
-    background: #000000be;
+    background: #ffffffbe;
     width:95%
   }
   .uc-privacy-container{
@@ -729,12 +734,12 @@ nav a.book-btn {
 }
 .privacy-table th{
   width:fit-content;
-  background: var(--primary-color--);
+  background: var(--purple-main);
 }
   h1,p,ul,h2,h3,h4,li,th,td,tr,.privacy-table a{
     margin:0 2vw;
     font-family: var(--primary-font--);
-    color: var(--primary-color--);
+    color: var(--purple-main);
     text-decoration: none;
   }
  td,tr,th{
@@ -745,12 +750,12 @@ nav a.book-btn {
     width: fit-content;
   }
   strong,span{
-    color: var(--primary-color--);
+    color: var(--purple-main);
     font-size: 0.8vw;
     padding:0;
   }
   .privacy-table{
-    color:var(--primary-color--);
+    color:var(--purple-main);
     background-color: #000000;
   }
   li,.privacy-list-item{
@@ -759,11 +764,11 @@ nav a.book-btn {
     margin:0;
   }
   font-family: var(--primary-font--);
-  font: var(--primary-font-color--);
+  font: var(--purple-main);
   position: relative;
   z-index: 1;
   .privacy-footer,.privacy-meta-group,.privacy-meta-link{
-    color:var(--primary-color--);
+    color:var(--purple-main);
   }
 }
 .policy-section{
@@ -929,6 +934,161 @@ nav a.book-btn {
 		max-width: 280px;
 	}
 
+	/*----------------------------------------------------------------------------------------------------------------*/
+    /*--------------------------------------------   PRIVACY POLICY  -------------------------------------------------*/
+    /*----------------------------------------------------------------------------------------------------------------*/
+    .privacy-table{
+		background-color: #03bff8;
+	}
+
+	.privacy-section{
+        margin:0;
+        padding:0;
+        h2{
+            margin:2vw 6vw;
+            text-align: left;
+        }
+    }
+
+    .uc-privacy-container.privacy-wrapper{
+        padding:0;
+    }
+    
+    .uc-privacy-policy{
+        .privacy-meta-text{
+            margin:0vw 2vw;
+        }
+        .privacy-table td {
+            text-align: left;
+            justify-content: center;
+            height: fit-content;
+            width: fit-content;
+			
+        }
+
+        .privacy-content{
+            width: 95%;
+        }
+
+        .privacy-title{
+            font-size: 6vw;
+            animation: fadeup 1s;
+        }
+
+        section,.privacy-section.gap-large{
+            margin:0vw 4vw;
+            animation: fadeup 1s;
+            
+        }
+
+        .privacy-table-container{
+        margin:2vw;
+        width: fit-content;
+        }
+
+        .uc-privacy-container{
+            border-radius: 5vw;
+        }
+
+        h1{
+            font-size: 5vw;
+            text-align: center;
+            margin: 4vw 0vw;
+        }
+
+        h2{
+        font-size: 4vw;
+        }
+
+        h3{
+        font-size: 4vw;
+        }
+
+        h4{
+        font-size: 4vw;
+        }
+
+        p,li.privacy-list-item,li.privacy-list-item strong,.privacy-text{
+        font-size: 4vw;
+        }
+
+        .privacy-table th:nth-child(3), .privacy-table td:nth-child(3), .privacy-table th:nth-child(4), .privacy-table td:nth-child(4){
+        width: fit-content;
+        }
+
+        .privacy-table th{
+        width:fit-content;
+        color:var(--purple-dark);
+        }
+
+        h1,p,ul,h2,h3,h4,li,th,td,tr,.privacy-table a{
+        text-align: left;
+        margin:0 2vw;
+        font-family: var(--primary-font--);
+        color: var(--purple-main);
+        text-decoration: none;
+        }
+
+        .privacy-table a{
+        margin:0;
+        font-size: 2vw;
+        }
+
+        td,tr,th{
+        background-color: var(--purple-main);
+        color: var(--purple-main-);
+        width: fit-content;
+        padding:0;
+        }
+
+        .privacy-table th, .privacy-table td{
+            line-height: 1.4;
+        }
+
+        .privacy-table th, .privacy-table td{
+        color: var(--purple-main);
+        padding-left:0.2vw;
+        width: fit-content;
+        font-size: 2vw;
+        }
+
+        strong,span{
+        color: var(--purple-main);
+        font-size: 1vw;
+        padding:0;
+        }
+        .privacy-table{
+        color:var(--purple-main);
+        }
+
+        .privacy-table thead th {
+        color:var(--purple-main);
+        width:fit-content;
+        }
+
+        li,.privacy-list-item{
+        font-size: 1vw;
+        padding:0;
+        margin:0;
+        width: fit-content;
+        }
+
+        .privacy-footer{
+        margin-left: 5vw;
+        }
+
+        .privacy-meta-group,.privacy-meta-link{
+        font-size: 1vw;
+        font-family: var(--primary-font--);
+        color:var(--purple-main);
+        }
+
+        .privacy-meta-group strong,.privacy-meta-group span{
+        font-size: 3vw;
+        color:var(--purple-main);
+        }
+    }
+
 	.footer-content {
     display:block;
 	}
@@ -1006,7 +1166,6 @@ select {
 	margin-bottom: 24px;
 }
 
-
 .price-card h4 {
 	margin: 0 0 8px;
 	color: var(--accent);
@@ -1059,4 +1218,64 @@ body.dark input[type="datetime-local"]::placeholder {
 /* Make datetime-local calendar icon visible in Edge/Chrome */
 body.dark input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     filter: invert(1) !important;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------   ANIMATIONS / TRANSITIONS  ----------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* RESOURCES: https://www.youtube.com/watch?v=UmzFk68Bwdk */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--purple-main), 0 0 20px var(--purple-main), 0 0 30px var(--purple-main), 0 0 40px var(--purple-main), 0 0 50px var(--purple-main), 0 0 3vw var(--purple-main), 0 0 4vw var(--purple-main);
+    filter: drop-shadow(0 0 0rem var(--purple-main));
+  }
+  
+  to {
+    text-shadow: 0 0 20px var(--purple-main), 0 0 30px var(--purple-main) 0 0 40px var(--purple-main) 0 0 50px var(--purple-main) 0 0 60px var(--purple-main) 0 0 70px var(--purple-main) 0 0 80px var(--purple-main);
+    filter: drop-shadow(0 0 20rem var(--purple-main));
+  }
+}
+
+@keyframes flip-over {
+  0% {
+    transform: scale(0,1);
+  }
+
+  100% {
+    transform: scale(0.9,1);
+  }
+
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes fadeup {
+  from {
+    transform: translateY(100%); 
+    opacity: 0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+  }
+  to {
+   transform: translateY(10vw); 
+    opacity: 1;
+  }
+
 }
